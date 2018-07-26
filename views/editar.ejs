@@ -1,0 +1,120 @@
+<%- include admin/aheader.ejs %>
+
+
+<section id="main-content">
+    <section class="wrapper">
+      <!--overview start-->
+      <div class="row">
+        <div class="col-lg-12">
+          <h3 class="page-header"><i class="fa fa-pencil"></i>Editar Manuales</h3><hr>
+        </div>
+      </div>
+      <!--/.row-->
+      <!-- Today status end -->
+      <div class="row">
+        <!--/col-->
+      <!-- project team & activity start -->
+      <!-- project team & activity end -->
+    </section>
+  </section>
+
+ <!-- <div class="container">
+    <div class="row">
+    <div class="col-md-12">
+    <form method="post" action="/update">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Nombre</label>
+        <input type="text" name="productos[precio]" value="<%= productos.precio %>" class="form-control" id="exampleInputEmail1" placeholder="Nombre">
+      </div>
+    
+      <div class="form-group">
+        <label for="exampleInputEmail1">Apellido</label>
+        <input type="text" name="productos[cantidad]" value="<%= productos.cantidad %>" class="form-control" id="exampleInputEmail1" placeholder="Apellido">
+      </div>
+    
+      <div class="form-group">
+        <label for="exampleInputEmail1">Telefono</label>
+        <input type="text" name="productos[tecnologia]" class="form-control" value="<%= productos.tecnologia%>" id="exampleInputEmail1" placeholder="Telefono">
+      </div>
+    
+    <input type="hidden" name="productos[id]" value="<%= productos.id %>">
+    
+      <button type="submit" class="btn btn-primary">Guardar</button>
+    </form>
+    </div>
+    </div>
+    </div>-->
+
+    <section id="main-content">
+        <!-- Basic Forms & Horizontal Forms-->
+    
+        <div class="row">
+            <div class="col-lg-2">
+          
+            </div>
+            <div class="col-lg-8">
+                <section class="panel panel-info">
+                  <header class="panel-heading">
+                    Datos del Manual
+                  </header>
+                  <div class="panel-body">
+                    <form role="form" method="POST" action="/update" enctype="multipart/form-data">
+                      <div class="form-group">
+                        <div class="row">
+                        <div class="col-md-6">
+                            <label for="exampleInputEmail1">Nombre del Manual</label>
+                            <input type="text" name="nombre" class="form-control" id="exampleInputEmail1" value="<%= productos.nombre %>">
+                        </div> 
+                        <div class="col-md-6">
+                            <label for="exampleInputEmail1">Precio</label>
+                            <input type="number" name="precio" class="form-control" id="exampleInputEmail1" value="<%= productos.precio %>" >
+                            </div> 
+                        </div>
+                      </div>
+                      <div class="form-group">
+                          <div class="row">
+                              <div class="col-md-6">
+                                  <label for="exampleInputEmail1">Cantidad</label>
+                                  <input type="number" name="cantidad"  value="<%= productos.cantidad %>" class="form-control" id="exampleInputEmail1">
+                              </div> 
+                              <div class="form-group">
+                                  <label for="exampleInputFile">Imagen</label>
+                                  <input type="file" name="imagen" value="<%= productos.imagen %>" ="exampleInputFile">
+                                </div> 
+                              </div>
+                      </div>
+                     <div class="form-group">
+                          <label for="exampleInputFile">Descripción</label>
+                          <textarea  class="form-control" rows="5" name="descripcion" ><%= productos.descripcion %></textarea>
+                      </div>
+    
+                      <div class="form-group">
+                          <div class="row">
+                              <div class="col-md-6">
+                                  <label for="exampleInputEmail1">Autor:</label>
+                                  <input type="text" name="autor" class="form-control" id="exampleInputEmail1" value="<%= productos.autor %>">
+                              </div> 
+                              <div class="col-md-6">
+                                  <label for="exampleInputEmail1">Tecnología:</label>
+                                  <input type="text" name="tecnologia" class="form-control" id="exampleInputEmail1" value="<%= productos.tecnologia%>">
+                              </div> 
+                              </div>
+                      </div>
+    
+                      <div class="form-group">
+                        <label for="exampleInputFile">Archivo</label>
+                        <input type="file" name="archivo"  id="exampleInputFile">
+                      </div><br>
+                      <input type="hidden" name="id" value="<%= productos.id %>">
+                      <button type="submit"  class="btn btn-success">Actualizar Manual</button>
+                    </form>
+      
+                  </div>
+                </section>
+              </div>
+            <div class="col-lg-2">
+    
+            </div>
+          </div>
+    </section>
+<% include admin/afooter.ejs %>

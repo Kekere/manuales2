@@ -1,0 +1,65 @@
+<%- include admin/aheader.ejs %>
+<!--main content start-->
+<section id="main-content">
+    <section class="wrapper">
+      <!--overview start-->
+      <div class="row">
+        <div class="col-lg-12">
+          <h3 class="page-header"><i class="fa fa-envelope"></i>Comentarios</h3><hr>
+        </div>
+      </div>
+      <!--/.row-->
+      <!-- Today status end -->
+
+
+
+      <div class="row">
+
+
+        <!--/col-->
+
+
+
+      <!-- project team & activity start -->
+
+      <!-- project team & activity end -->
+
+    </section>
+  </section>
+  <!--main content end-->
+</section>
+
+<!-- container section start -->
+<section id="main-content">
+  <div class="container">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>CLIENTE</th>
+                <th>E-MAIL</th>
+                <th>COMENTARIO</th>
+                <th>MANUAL</th>
+                <th colspan="2" width="10%">ACCIÓN</th>
+            </tr>
+        </thead>
+        <%for(var i=0; i<comentario.length;i++){%>
+        <tbody>
+         
+            <tr>
+                <td><%=comentario[i].id_comen%></td>
+                <td><%=comentario[i].cliente%></td>
+                <td><%=comentario[i].correo%></td>
+                <td><%=comentario[i].comentario%></td>
+                <td><%=comentario[i].nombre%></td>
+                <td>
+                 <a href="/delete_comen/<%= comentario[i].id_comen %>" class="btn btn-danger">Eliminar</a>
+                </td>
+            </tr>
+          
+        </tbody>
+        <% } %> 
+    </table>
+    </div>
+  </section>
+<% include admin/afooter.ejs %>

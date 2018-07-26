@@ -1,0 +1,50 @@
+<%- include layouts/header.ejs %>
+    <!-- banner -->
+    <div class="page-head">
+        <div class="container">
+            <h3>Carrito</h3>
+        </div>
+    </div>
+    <!-- //banner -->
+
+    <!-- check out -->
+    <div class="checkout">
+        <div class="container">
+            <h3>Mi Carrito de Compras</h3>
+            <div class="table-responsive checkout-right animated wow slideInUp" data-wow-delay=".5s">
+                <table class="timetable_sub">
+
+                    <div class="simpleCart_items"></div>
+                    <!-- Yep it's that simple -->
+                    <hr>
+
+                    <div class="right"><strong>Total: </strong><span class="simpleCart_total"></span></div>
+
+                    <div style="margin: 10px">
+                        <a href="javascript:;" class="simpleCart_empty">Borrar todo</a>
+                        <a href="javascript:;" class="simpleCart_checkout">Comprar</a>
+                    </div><br>
+
+                    <!--quantity-->
+                    <script>
+                        $('.value-plus').on('click', function() {
+                            var divUpd = $(this).parent().find('.value'),
+                                newVal = parseInt(divUpd.text(), 10) + 1;
+                            divUpd.text(newVal);
+                        });
+
+                        $('.value-minus').on('click', function() {
+                            var divUpd = $(this).parent().find('.value'),
+                                newVal = parseInt(divUpd.text(), 10) - 1;
+                            if (newVal >= 1) divUpd.text(newVal);
+                        });
+                    </script>
+                    <!--quantity-->
+                </table>
+            </div>
+
+        </div>
+    </div>
+    <!-- //check out -->
+
+    <% include layouts/footer.ejs %>
